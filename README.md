@@ -30,6 +30,14 @@ In terminal B, run `node test` to execute the autocannon test defined in test.js
 - morgan - logging
 - clinic - useful for looking at local i/o issues and event loop performance in your express app.
 
+## Using clinic
+
+Instead of running `npm start` in terminal A, execute your app by installing clinic, and then executing: 
+
+`./node_modules/.bin/clinic doctor -- node bin/www`
+
+Then after you've executed `node test` in terminal B, press Ctrl-C in terminal A to generate your clinic report.
+
 
 [1] https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop
 
