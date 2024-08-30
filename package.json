@@ -7,9 +7,12 @@
   },
   "dependencies": {
     "autocannon": "^7.15.0",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-lag-detector": "^2.0.0",
+    "express-queue": "^0.0.13",
     "express-under-pressure": "^0.1.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",

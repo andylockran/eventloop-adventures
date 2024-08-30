@@ -1,12 +1,16 @@
 'use strict'
 
+const { stdout } = require("node:process");
 const autocannon = require("autocannon");
 
-let n = 100;
+function print(result) {
+  stdout.write(autocannon.printResult(result));
+}
+let n = 500;
 autocannon({
   url: `http://localhost:3000/?n=${n}`,
-  connections: 10, //default
+  connections: 100, //default
   pipelining: 1, // default
   duration: 10, // default
   workers: 10,
-}, console.log);
+}, (err, data) => print(data));
